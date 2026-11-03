@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Landing Page</title>
+  
+  <!-- Tailwind CSS CDN -->
+     <link rel="icon" type="image/png" href="images/necktie.jpg">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <!-- Google Fonts: Inter -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: {
+            sans: ['Inter', 'sans-serif'],
+          },
+          colors: {
+            brandDark: '#060a12',
+            brandCard: '#0f172a',
+            brandBorder: '#1e293b',
+            brandCyan: '#00d2ff',
+            brandBlue: '#0072ff',
+          },
+          boxShadow: {
+            glow: '0 0 25px -5px rgba(0, 210, 255, 0.35)',
+            glowHover: '0 0 35px 2px rgba(0, 210, 255, 0.55)',
+            cardGlow: '0 0 50px -10px rgba(0, 114, 255, 0.25)',
+          }
+        }
+      }
+    }
+  </script>
+
+  <style>
+    /* Custom Cyan to Blue Gradient Text */
+    .text-gradient {
+      background: linear-gradient(135deg, #00d2ff 0%, #3a7bd5 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+
+    /* Button Highlight Gradient */
+    .btn-gradient {
+      background: linear-gradient(135deg, #00c6ff 0%, #0072ff 100%);
+    }
+
+    /* Ambient Glow Background Effect */
+    .bg-ambient {
+      background: radial-gradient(circle at 50% 20%, rgba(0, 162, 255, 0.12) 0%, rgba(6, 10, 18, 1) 70%);
+    }
+  </style>
+</head>
+<body class="bg-brandDark bg-ambient text-slate-100 min-h-screen flex items-center justify-center p-4 font-sans antialiased selection:bg-cyan-500 selection:text-black relative overflow-x-hidden">
+
+  <!-- Animated Tech Canvas Background -->
+  <canvas id="tech-canvas" class="fixed inset-0 w-full h-full pointer-events-none z-0"></canvas>
+
+  <!-- Main Glass Container -->
+  <main class="w-full max-w-md mx-auto bg-brandCard/80 backdrop-blur-xl border border-slate-800/80 rounded-3xl p-6 sm:p-8 shadow-cardGlow relative overflow-hidden my-8 z-10">
+    
+    <!-- Top Ambient Accent Light -->
+    <div class="absolute -top-24 left-1/2 -translate-x-1/2 w-48 h-48 bg-cyan-500/20 blur-3xl rounded-full pointer-events-none"></div>
+
+    <!-- Status Badge -->
+    <div class="flex justify-center mb-6">
+      <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-slate-900/90 border border-slate-700/60 shadow-inner text-xs font-medium text-slate-300">
+        <span class="w-2 h-2 rounded-full bg-cyan-400 animate-pulse"></span>
+        Available for IT & Administrative Opportunities
+      </div>
+    </div>
+
+    <!-- Profile Header -->
+    <header class="text-center mb-8">
+      <!-- Avatar / Profile Icon -->
+      <div class="relative w-24 h-24 mx-auto mb-4 group">
+        <div class="absolute inset-0 rounded-2xl bg-gradient-to-r from-cyan-400 to-blue-600 blur-md opacity-70 group-hover:opacity-100 transition duration-300"></div>
+        <div class="relative w-full h-full rounded-2xl bg-slate-900 border border-slate-700/80 p-1 flex items-center justify-center overflow-hidden">
+          <svg class="w-12 h-12 text-cyan-400" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z"></path>
+          </svg>
+        </div>
+      </div>
+
+      <!-- Title & Subtitle -->
+      <h1 class="text-3xl sm:text-4xl font-extrabold tracking-tight mb-2">
+        Hi, I'm <span class="text-gradient">Jerick Mercader</span>
+      </h1>
+      <p class="text-slate-400 text-sm leading-relaxed max-w-xs mx-auto font-normal">
+        BS Information Technology Graduate <span class="text-slate-600">|</span> Office Clerk & Tech Support
+      </p>
+    </header>
+
+    <!-- Links Section -->
+    <section class="space-y-4 mb-8">
+      
+      <!-- 1. Portfolio Link -->
+      <a href="https://mercaderportfolio.vercel.app/" target="_blank" rel="noopener noreferrer" 
+         class="group relative flex items-center justify-between p-4 rounded-xl bg-slate-900/90 border border-slate-800 hover:border-cyan-500/50 transition-all duration-300 hover:shadow-glow hover:-translate-y-0.5">
+        <div class="flex items-center gap-3.5">
+          <div class="w-10 h-10 rounded-lg btn-gradient flex items-center justify-center text-white shadow-md group-hover:scale-105 transition duration-300">
+            <!-- Briefcase / Portfolio Icon -->
+            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 13.255A23.931 23.931 0 0112 15c-3.183 0-6.22-.62-9-1.745M16 6V4a2 2 0 00-2-2h-4a2 2 0 00-2 2v2m4 6h.01M5 20h14a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path>
+            </svg>
+          </div>
+          <div class="text-left">
+            <div class="text-base font-semibold text-slate-100 group-hover:text-cyan-300 transition">My Website</div>
+            <div class="text-xs text-slate-400">View Skills, Background and Experiences</div>
+          </div>
+        </div>
+        <!-- External Arrow -->
+        <svg class="w-5 h-5 text-slate-500 group-hover:text-cyan-400 group-hover:translate-x-1 transition duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path>
+        </svg>
+      </a>
+
+      <!-- 2. Certificates Link -->
+      <a href="https://certificate-nu-five.vercel.app/" target="_blank" rel="noopener noreferrer" 
+         class="group relative flex items-center justify-between p-4 rounded-xl bg-slate-900/90 border border-slate-800 hover:border-cyan-500/50 transition-all duration-300 hover:shadow-glow hover:-translate-y-0.5">
+        <div class="flex items-center gap-3.5">
+          <div class="w-10 h-10 rounded-lg bg-slate-800 border border-slate-700/60 flex items-center justify-center text-cyan-400 group-hover:bg-slate-700/80 transition duration-300">
+            <!-- Badge / Certificate Icon -->
+            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4M7.835 4.697a3.42 3.42 0 001.946-.806 3.42 3.42 0 014.438 0 3.42 3.42 0 001.946.806 3.42 3.42 0 013.138 3.138 3.42 3.42 0 00.806 1.946 3.42 3.42 0 010 4.438 3.42 3.42 0 00-.806 1.946 3.42 3.42 0 01-3.138 3.138 3.42 3.42 0 00-1.946.806 3.42 3.42 0 01-4.438 0 3.42 3.42 0 00-1.946-.806 3.42 3.42 0 01-3.138-3.138 3.42 3.42 0 00-.806-1.946 3.42 3.42 0 010-4.438 3.42 3.42 0 00.806-1.946 3.42 3.42 0 013.138-3.138z"></path>
+            </svg>
+          </div>
+          <div class="text-left">
+            <div class="text-base font-semibold text-slate-100 group-hover:text-cyan-300 transition">My Certificates</div>
+            <div class="text-xs text-slate-400">Credentials & achievements</div>
+          </div>
+        </div>
+        <!-- External Arrow -->
+        <svg class="w-5 h-5 text-slate-500 group-hover:text-cyan-400 group-hover:translate-x-1 transition duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path>
+        </svg>
+      </a>
+
+      <!-- 3. LinkedIn Account Link -->
+      <a href="https://www.linkedin.com/in/jerick-mercader-b7bbb2189" target="_blank" rel="noopener noreferrer" 
+         class="group relative flex items-center justify-between p-4 rounded-xl bg-slate-900/90 border border-slate-800 hover:border-cyan-500/50 transition-all duration-300 hover:shadow-glow hover:-translate-y-0.5">
+        <div class="flex items-center gap-3.5">
+          <div class="w-10 h-10 rounded-lg bg-slate-800 border border-slate-700/60 flex items-center justify-center text-cyan-400 group-hover:bg-slate-700/80 transition duration-300">
+            <!-- LinkedIn SVG Icon -->
+            <svg class="w-5 h-5 fill-current" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+              <path d="M19 3a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h14m-.5 15.5v-5.3a3.26 3.26 0 0 0-3.26-3.26c-.85 0-1.84.52-2.28 1.3v-1.11h-2.79v8.37h2.79v-4.93c0-.77.62-1.4 1.39-1.4a1.4 1.4 0 0 1 1.4 1.4v4.93h2.75M6.46 10.9v8.37H9.25V10.9H6.46M7.86 6.7a1.64 1.64 0 1 0 0 3.28 1.64 1.64 0 0 0 0-3.28Z"/>
+            </svg>
+          </div>
+          <div class="text-left">
+            <div class="text-base font-semibold text-slate-100 group-hover:text-cyan-300 transition">LinkedIn Profile</div>
+            <div class="text-xs text-slate-400">Connect professionally</div>
+          </div>
+        </div>
+        <!-- External Arrow -->
+        <svg class="w-5 h-5 text-slate-500 group-hover:text-cyan-400 group-hover:translate-x-1 transition duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path>
+        </svg>
+      </a>
+
+    </section>
+
+    <!-- Quick Stat Highlights (Matching original layout) -->
+    <div class="grid grid-cols-3 gap-2 pt-6 border-t border-slate-800/80 text-center">
+      <div>
+        <div class="text-lg font-bold text-slate-100">490+</div>
+        <div class="text-[11px] text-slate-400 leading-tight mt-0.5">OJT Hours</div>
+      </div>
+      <div>
+        <div class="text-lg font-bold text-slate-100">BSIT</div>
+        <div class="text-[11px] text-slate-400 leading-tight mt-0.5">Graduate</div>
+      </div>
+      <div>
+        <div class="text-lg font-bold text-cyan-400"><1 Year</div>
+        <div class="text-[11px] text-slate-400 leading-tight mt-0.5">Clerk/IT Exp.</div>
+      </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="text-center mt-6 pt-2">
+      <p class="text-xs text-slate-500">© Tacloban City, Philippines</p>
+    </footer>
+
+  </main>
+
+  <!-- Canvas Interactive Tech Animation Script -->
+  <script>
+    const canvas = document.getElementById('tech-canvas');
+    const ctx = canvas.getContext('2d');
+
+    let width, height;
+    let particles = [];
+    let mouse = { x: null, y: null, radius: 140 };
+
+    function initCanvas() {
+      width = canvas.width = window.innerWidth;
+      height = canvas.height = window.innerHeight;
+      createParticles();
+    }
+
+    window.addEventListener('resize', () => {
+      width = canvas.width = window.innerWidth;
+      height = canvas.height = window.innerHeight;
+      createParticles();
+    });
+
+    window.addEventListener('mousemove', (e) => {
+      mouse.x = e.x;
+      mouse.y = e.y;
+    });
+
+    window.addEventListener('mouseleave', () => {
+      mouse.x = null;
+      mouse.y = null;
+    });
+
+    class Particle {
+      constructor() {
+        this.x = Math.random() * width;
+        this.y = Math.random() * height;
+        this.vx = (Math.random() - 0.5) * 0.8;
+        this.vy = (Math.random() - 0.5) * 0.8;
+        this.radius = Math.random() * 2 + 1;
+        this.color = Math.random() > 0.4 ? 'rgba(0, 210, 255, ' : 'rgba(0, 114, 255, ';
+        this.alpha = Math.random() * 0.5 + 0.3;
+      }
+
+      draw() {
+        ctx.beginPath();
+        ctx.arc(this.x, this.y, this.radius, 0, Math.PI * 2);
+        ctx.fillStyle = this.color + this.alpha + ')';
+        ctx.shadowBlur = 8;
+        ctx.shadowColor = '#00d2ff';
+        ctx.fill();
+      }
+
+      update() {
+        this.x += this.vx;
+        this.y += this.vy;
+
+        if (this.x < 0 || this.x > width) this.vx *= -1;
+        if (this.y < 0 || this.y > height) this.vy *= -1;
+
+        // Interactive mouse connection/repulsion
+        if (mouse.x && mouse.y) {
+          let dx = mouse.x - this.x;
+          let dy = mouse.y - this.y;
+          let distance = Math.sqrt(dx * dx + dy * dy);
+          if (distance < mouse.radius) {
+            let force = (mouse.radius - distance) / mouse.radius;
+            this.x -= (dx / distance) * force * 2;
+            this.y -= (dy / distance) * force * 2;
+          }
+        }
+      }
+    }
+
+    function createParticles() {
+      particles = [];
+      const particleCount = Math.floor((width * height) / 12000);
+      for (let i = 0; i < particleCount; i++) {
+        particles.push(new Particle());
+      }
+    }
+
+    function connectParticles() {
+      for (let i = 0; i < particles.length; i++) {
+        for (let j = i + 1; j < particles.length; j++) {
+          let dx = particles[i].x - particles[j].x;
+          let dy = particles[i].y - particles[j].y;
+          let distance = Math.sqrt(dx * dx + dy * dy);
+
+          if (distance < 110) {
+            let opacity = (1 - distance / 110) * 0.25;
+            ctx.beginPath();
+            ctx.moveTo(particles[i].x, particles[i].y);
+            ctx.lineTo(particles[j].x, particles[j].y);
+            ctx.strokeStyle = `rgba(0, 210, 255, ${opacity})`;
+            ctx.lineWidth = 0.8;
+            ctx.stroke();
+          }
+        }
+      }
+    }
+
+    function animate() {
+      ctx.clearRect(0, 0, width, height);
+
+      particles.forEach(p => {
+        p.update();
+        p.draw();
+      });
+
+      connectParticles();
+      requestAnimationFrame(animate);
+    }
+
+    window.onload = function() {
+      initCanvas();
+      animate();
+    };
+  </script>
+</body>
+</html>
